@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Will You Be My Valentine? 💝</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💝</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <div class="valentine-container">
+            <h1 class="main-title">Hey <span id="valentine-name">Valentine</span>! 💝</h1>
+            
+            <!-- Scene 1: First Question -->
+            <div id="scene1" class="scene active">
+                <p class="question-text" id="question1">Do you like me?</p>
+                <div class="buttons">
+                    <button id="yes-btn1" class="btn yes-btn">Yes</button>
+                    <button id="no-btn1" class="btn no-btn">No</button>
+                </div>
+                <div id="secret-message" class="secret-message">I don't like you, I love you! 💙</div>
+            </div>
+            
+            <!-- Scene 2: Love Meter -->
+            <div id="scene2" class="scene">
+                <p class="question-text" id="question2">How much do you love me?</p>
+                <div class="love-meter-container">
+                    <p id="meter-text" class="meter-text">This much!</p>
+                    <div class="meter-wrapper">
+                        <div class="meter-background"></div>
+                        <input type="range" id="love-meter" class="love-meter" min="0" max="100" value="0">
+                        <div id="meter-fill" class="meter-fill"></div>
+                    </div>
+                    <div id="percentage" class="percentage">0%</div>
+                    <div id="love-message" class="love-message"></div>
+                </div>
+                <button id="next-btn" class="btn next-btn">Next 💙</button>
+            </div>
+            
+            <!-- Scene 3: Final Question -->
+            <div id="scene3" class="scene">
+                <p class="question-text" id="question3">Will you be my Valentine on February 14th, 2026? 🌹</p>
+                <div class="buttons">
+                    <button id="yes-btn3" class="btn yes-btn">Yes!</button>
+                    <button id="no-btn3" class="btn no-btn">No 💙</button>
+                </div>
+            </div>
+            
+            <!-- Scene 4: Celebration -->
+            <div id="scene4" class="scene">
+                <div class="celebration">
+                    <h2 class="celebration-title">Yesss, Now I'm the luckiest person in the world with the Prettiest Lady as my Valentine! 🥰🥹💙</h2>
+                    <p class="celebration-message">Now, just a big warm hug and a huge kiss when I see you to make it official!</p>
+                    <div class="celebration-emojis">
+                        <span class="emoji">🎁</span>
+                        <span class="emoji">💙</span>
+                        <span class="emoji">😘</span>
+                        <span class="emoji">💋</span>
+                    </div>
+                    <div class="hearts-container" id="hearts-container"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Music Control -->
+        <button id="music-toggle" class="music-btn">
+            <i class="fas fa-music"></i> <span id="music-text">🎵 Play Music</span>
+        </button>
+        
+        <!-- Floating Emojis Container -->
+        <div id="floating-emojis"></div>
+    </div>
 
+    <!-- Audio Player (Hidden) -->
+    <audio id="background-music" loop>
+        <source src="https://res.cloudinary.com/dqfifo1uj/video/upload/v1770673964/Daniel_Caesar_-_Best_Part_Audio_ft._H.E.R._fvvisl.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Include JavaScript Files -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
