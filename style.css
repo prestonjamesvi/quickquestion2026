@@ -115,12 +115,17 @@ body {
     transform: translateY(-3px) scale(1.05);
 }
 
-.secret-message {
+
+}.secret-message {
     margin-top: 20px;
     font-size: 1.2em;
     color: #ff4757;
     opacity: 0;
     transition: opacity 0.3s ease;
+    min-height: 30px; /* Add this line */
+    padding: 10px;    /* Add this line */
+    font-family: 'Dancing Script', cursive; /* Add this line */
+    font-weight: bold; /* Add this line */
 }
 
 .love-meter-container {
